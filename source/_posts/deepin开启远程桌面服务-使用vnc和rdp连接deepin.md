@@ -10,7 +10,10 @@ tags:
  - xrdp
 ---
 
-安装openssh;安装和配置x11vnc;安装和配置xrdp;设置开机启动;
+* 安装openssh;
+* 安装和配置x11vnc;
+* 安装和配置xrdp;
+* 设置开机启动;
 
 <!-- more -->
 
