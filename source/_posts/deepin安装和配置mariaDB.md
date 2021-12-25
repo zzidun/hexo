@@ -2,7 +2,10 @@
 title: deepin安装和配置mariaDB
 date: 2021-12-25 17:29:27
 categories:
+ - 安装和配置
 tags:
+ - mariaDB
+ - deepin
 ---
 
 安装mariaDB;配置root密码;创建新用户并配置权限;
