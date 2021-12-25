@@ -8,7 +8,9 @@ tags:
  - deepin
 ---
 
-安装mariaDB;配置root密码;创建新用户并配置权限;
+* 安装mariaDB;
+* 配置root密码;
+* 创建新用户并配置权限;
 
 <!-- more -->
 

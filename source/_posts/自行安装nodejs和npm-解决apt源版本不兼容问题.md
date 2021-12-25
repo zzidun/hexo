@@ -11,7 +11,8 @@ tags:
  - deepin
 ---
 
-安装nvm;使用nvm安装新版本nodejs和npm
+* 安装nvm;
+* 使用nvm安装新版本nodejs和npm
 
 <!-- more -->
 
