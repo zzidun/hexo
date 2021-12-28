@@ -89,6 +89,14 @@ sudo apt-get --fix-broken install -y
 
 # 常用软件安装
 
+## git设置
+
+```shell
+git config --global user.email "<邮箱>"
+git config --global user.name "<用户名>"
+git config --global http.postBuffer 10000M
+```
+
 ## go
 
 ```shell
