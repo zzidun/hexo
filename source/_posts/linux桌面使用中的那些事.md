@@ -205,7 +205,7 @@ pio settings set projects_dir <路径>
 只需要在`~/.bashrc`文件末尾加上这个:
 
 ```shell
-
+export EGL_PLATFORM=x11
 ```
 
 重新打开终端,输入`anbox.appmgr`就可以打开了.
