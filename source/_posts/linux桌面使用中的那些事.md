@@ -1,10 +1,11 @@
 ---
-title: deepin安装注意事项和安装后配置
+title: linux桌面使用中的那些事
 date: 2021-12-28 20:42:48
 categories:
  - 安装和配置
 tags:
- - deepin
+ - linux
+ - anbox
 ---
 
 * 安装时分区注意;
@@ -20,19 +21,36 @@ tags:
 
 不要用默认分区,不要用默认分区,不要用默认分区.
 
-千万注意,默认分区只给根目录分配`15G`空间,一下子就满了,满了很难搞,非常折磨
+比如,`deepin`默认分区只给根目录分配`15G`空间,一下子就满了,满了很难搞,非常折磨.
 
-我的分区方式如下
+我的通常分区方式如下
 
 | 挂在目录 | 文件系统 | 大小 |
 | --- | --- | --- |
-| `/boot/efi` | `efi` | `200M` |
-| `/Boot`(windows相关) | `ext4` | `2G` |
+| `/boot` | `ext4` | `2G` |
 | `/` | `ext4` | `其余全部空间` |
-| `<无>` | `linux-swap` | `8G` |
+| `<无>` | `linux-swap` | `0.5G` |
 
+以前我把`/boot`分区弄得很小(`400M`),然后某次更新竟然满了,做什么都失败.
+
+只能进`live`里面用`gparted`改分区.
+
+我其实觉得`/boot`分区不用单独分出来.
+
+我心里觉得除非是某些目录需要特殊的文件系统比如`efi`需要`fat32`,否则同硬盘分区就是扯蛋:
+
+1. 文件跨分区移动耗时很长,像是跨硬盘移动一样,哪怕他们实际上在同一个硬盘.
+2. 常常因为分区不合理,导致某一分区满了,其他分区还有很多空间,这时候调整非常麻烦.
+3. 实际上用文件夹就能取得和分区一样的效果,而且没有上面的缺点.
+4. 同一个硬盘的分区不会有什么保险的作用,硬盘损坏依旧是所有分区遭殃.
+
+可见,我们根本没有理由去划分他.
 
 # 移动/tmp目录到tmpfs
+
+`/tmp`目录是缓存文件的目录,开关机就会被系统删除.
+
+这东西显然应该放到内存,还能更快存取.实在没有必要放到硬盘.
 
 编辑`/etc/fstab`文件,后面加上以下内容
 
@@ -151,24 +169,6 @@ go version
 
 搜索栏输入`browser.cache.memory.capacity`设置为`-1`.
 
-
-## 安卓模拟器
-
-安装uengine
-```shell
-sudo apt install uengine
-```
-
-安装apk
-```shell
-uengine install --apk=<apk的绝对路径>
-```
-
-启动模拟器
-```shell
-uengine launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
-```
-
 ## platformIO
 
 直接`vscode`安装对应插件.
@@ -182,3 +182,30 @@ uengine launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewAc
 ```shell
 pio settings set projects_dir <路径>
 ```
+
+## minicom和fastboot找不到设备
+
+他们需要`sudo`.
+
+## anbox
+
+官方的教程中,找不到`binder`是正常的,`ubuntu20`之后都找不到的.
+
+接着下一步就好.
+
+`anbox.appmgr`启动不了,显示以下错误,是需要设置环境变量.
+
+```shell
+[ 2022-01-06 05:29:58] [launch.cpp:168@operator()] Session manager is not yet running, trying to start it
+[ 2022-01-06 05:29:58] [launch.cpp:117@launch_session_manager] Started session manager, will now try to connect ..
+[ 2022-01-06 05:29:59] [splash_screen.cpp:55@SplashScreen] Window has no associated renderer yet, creating one ...
+[ 2022-01-06 05:30:04] [daemon.cpp:61@Run] [org.freedesktop.DBus.Error.ServiceUnknown] The name org.anbox was not provided by any .service files
+```
+
+只需要在`~/.bashrc`文件末尾加上这个:
+
+```shell
+
+```
+
+重新打开终端,输入`anbox.appmgr`就可以打开了.

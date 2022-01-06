@@ -1,10 +1,9 @@
 ---
-title: 在deepin使用nuclei-sdk编译longan nano程序并获取串口打印信息
+title: linux下使用nuclei-sdk编译longan-nano程序并获取串口打印信息
 date: 2021-12-25 19:05:04
 categories:
  - 经验和总结
 tags:
- - deepin
  - riscv
  - longan
  - nuclei
