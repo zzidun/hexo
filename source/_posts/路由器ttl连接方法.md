@@ -13,9 +13,9 @@ tags:
 
 <!-- more -->
 
-# 安装minicom和tftpd-hpa
+## 安装minicom和tftpd-hpa
 
-## 安装软件
+### 安装软件
 
 ```shell
 sudo apt install minicom
@@ -23,7 +23,7 @@ sudo apt install tftpd-hpa
 sudo apt install tftp
 ```
 
-## 配置tftp
+### 配置tftp
 
 查看`tftpd-hpa`状态.
 
@@ -65,9 +65,9 @@ sudo chown -R 777 /home/zzidun/tftp-file
 sudo service tftpd-hpa restart
 ```
 
-# 电脑终端打开路由器命令行
+## 电脑终端打开路由器命令行
 
-## 连接
+### 连接
 
 拆开路由器,可能会找到一排孔,上面标有`GND TX RX 3.3V`等.
 
@@ -85,7 +85,7 @@ sudo service tftpd-hpa restart
 
 把任意`LAN`口用网线接到电脑,在电脑上设置有线网口`ip`为`192.168.1.2`,掩码为`255.255.255.0`,网关为`192.168.1.1`.
 
-## minicom
+### minicom
 
 打开minicom
 

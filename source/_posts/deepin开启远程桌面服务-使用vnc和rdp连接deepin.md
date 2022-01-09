@@ -19,14 +19,14 @@ tags:
 
 要注意的是,以下操作对于其他打debian系发行版并不通用.
 
-# 安装和启动sshd
+## 安装和启动sshd
 
 ```shell
 sudo apt install openssh-server
 sudo systemctl enable ssh.service
 ```
 
-# 安装和配置x11vnc
+## 安装和配置x11vnc
 
 ```shell
 sudo apt install x11vnc
@@ -61,7 +61,7 @@ WantedBy=multi-user.target
 
 上面的`ExecStart`一项,里面有一个`/etc/x11vnc.pass`,这个是前面到密码文件的路径,你也可以不拷贝到`/etc`目录,而是直接设置成`/home/<用户名>/.vnc/passwd`
 
-# 设置开机启动
+## 设置开机启动
 
 ```shell
 sudo systemctl enable x11vnc.service
@@ -69,7 +69,7 @@ sudo systemctl enable x11vnc.service
 
 这时候重启,就可以用vnc软件连接到电脑了.
 
-# 安装xrdp并配置开机启动
+## 安装xrdp并配置开机启动
 
 (需要先完成以上步骤
 

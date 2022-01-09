@@ -14,9 +14,9 @@ tags:
 
 <!-- more -->
 
-# 下载工具链源码
+## 下载工具链源码
 
-## 设置git选项
+### 设置git选项
 
 首先,设置`http.postBuffer`选项为`2000M`,我也不知道是什么作用,但我猜测他是一个库的文件大小的上限?
 
@@ -26,7 +26,7 @@ tags:
 git config --global http.postBuffer 2000M
 ```
 
-## 下载代码
+### 下载代码
 
 这个命令只是下载了主仓,如果你想要同时递归下载所有子仓的话,可以加上参数`--recursive`.也可以下载完主仓之后再另外下载子仓.
 
@@ -40,7 +40,7 @@ git clone https://github.com/riscv/riscv-gnu-toolchain
 git submodule update --init --recursive --progress
 ```
 
-## 加速下载
+### 加速下载
 
 如果下载实在很慢,可以修改源码目录下的`.gitmodules`文件,
 
@@ -56,7 +56,7 @@ git submodule update --init --recursive --progress
 sudo git submodule sync
 ```
 
-# 编译
+## 编译
 
 在编译之前,需要安装一些工具
 

@@ -13,7 +13,7 @@ tags:
 
 <!-- more -->
 
-# 安装
+## 安装
 
 输入以下命令安装mariadb
 
@@ -27,9 +27,9 @@ sudo apt-get install mariadb-server mariadb-client
 sudo systemctl start mariadb
 ```
 
-# 配置
+## 配置
 
-## 设置系统的root帐号的密码
+### 设置系统的root帐号的密码
 
 一开始登录mysql需要用root用户登录
 
@@ -39,7 +39,7 @@ deepin默认root密码为空,需要先输入以下命令设置root用户密码
 sudo passwd
 ```
 
-## 登录mysql
+### 登录mysql
 
 切换到root用户
 
@@ -61,7 +61,7 @@ mysql_secure_installation
 mysql -uroot -p<密码>
 ```
 
-## 添加新用户并授权
+### 添加新用户并授权
 
 首先打开`mysql`数据库.
 

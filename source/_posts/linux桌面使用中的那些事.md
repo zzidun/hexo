@@ -17,7 +17,7 @@ tags:
 
 <!-- more -->
 
-# 安装时分区注意
+## 安装时分区注意
 
 不要用默认分区,不要用默认分区,不要用默认分区.
 
@@ -46,7 +46,7 @@ tags:
 
 可见,我们根本没有理由去划分他.
 
-# 移动/tmp目录到tmpfs
+## 移动/tmp目录到tmpfs
 
 `/tmp`目录是缓存文件的目录,开关机就会被系统删除.
 
@@ -59,13 +59,13 @@ tmpfs /tmp tmpfs defaults 0 0
 tmpfs /var/tmp tmpfs defaults 0 0
 ```
 
-# 配置远程桌面
+## 配置远程桌面
 
 {% post_link deepin开启远程桌面服务-使用vnc和rdp连接deepin %}
 
-# 快捷方式
+## 快捷方式
 
-## 制作快捷方式
+### 制作快捷方式
 
 当我们有一个可执行文件,希望能够在开始菜单直接打开他.
 
@@ -89,7 +89,7 @@ Icon=/home/zzidun/app/uengine/anbox.svg
 Type=Application
 ```
 
-## 快捷方式移动到开始菜单
+### 快捷方式移动到开始菜单
 
 复制到`/usr/share/applications`目录即可.
 
@@ -97,7 +97,7 @@ Type=Application
 sudo cp <xxx.desktop> /usr/share/application/
 ```
 
-# 应用商店安装到75%报错
+## 应用商店安装到75%报错
 
 一般是由于卸载软件没有完成导致的,用以下命令可以解决:
 
@@ -105,7 +105,7 @@ sudo cp <xxx.desktop> /usr/share/application/
 sudo apt-get --fix-broken install -y
 ```
 
-# apt install XXX-
+## apt install XXX-
 
 千万谨慎,不要在安装命令后面多写一个横杆`-`,这代表卸载.
 
@@ -115,9 +115,9 @@ sudo apt-get --fix-broken install -y
 
 然后就变成执行了`sudo apt install gcc-`,一堆软件被卸载了,我人也裂开了.
 
-# 常用软件安装
+## 常用软件安装
 
-## git设置
+### git设置
 
 ```shell
 git config --global user.email "<邮箱>"
@@ -125,7 +125,7 @@ git config --global user.name "<用户名>"
 git config --global http.postBuffer 10000M
 ```
 
-## go
+### go
 
 ```shell
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
@@ -151,15 +151,15 @@ source ~/.bashrc
 go version
 ```
 
-## mariaDB
+### mariaDB
 
 {% post_link 自行安装nodejs和npm-解决apt源版本不兼容问题 %}
 
-## npm
+### npm
 
 {% post_link deepin安装和配置mariaDB %}
 
-## firefox
+### firefox
 
 缩小顶边栏
 
@@ -179,7 +179,7 @@ go version
 
 搜索栏输入`browser.cache.memory.capacity`设置为`-1`.
 
-## platformIO
+### platformIO
 
 直接`vscode`安装对应插件.
 
@@ -193,11 +193,11 @@ go version
 pio settings set projects_dir <路径>
 ```
 
-## minicom和fastboot找不到设备
+### minicom和fastboot找不到设备
 
 他们需要`sudo`.
 
-## anbox
+### anbox
 
 官方的教程中,找不到`binder`是正常的,`ubuntu20`之后都找不到的.
 

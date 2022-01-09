@@ -18,9 +18,9 @@ tags:
 
 <!-- more -->
 
-# 准备nuclei-sdk
+## 准备nuclei-sdk
 
-## riscv工具链
+### riscv工具链
 
 从[nuclei官网](https://www.nucleisys.com/download.php)下载riscv gnu toolchain.
 
@@ -28,7 +28,7 @@ tags:
 
 把里面的`gcc`目录解压,某个目录(暂时把这个目录记做`dir1`)
 
-## openocd工具
+### openocd工具
 
 从[nuclei官网](https://www.nucleisys.com/download.php)下载openocd.
 
@@ -60,7 +60,7 @@ dir1
    |- ...
 ```
 
-## dfu-util工具
+### dfu-util工具
 
 我们使用`dfu-util`工具将程序刷入`longan nano`.
 
@@ -84,7 +84,7 @@ export PATH=$PATH:<你的dfu-util所在目录的绝对路径>
 
 
 
-## nuclei源码
+### nuclei源码
 
 从gitee下载nuclei-sdk源码
 
@@ -92,17 +92,17 @@ export PATH=$PATH:<你的dfu-util所在目录的绝对路径>
 git clone https://gitee.com/Nuclei-Software/nuclei-sdk
 ```
 
-# 编译
+## 编译
 
-## 设置工具目录
+### 设置工具目录
 
 进入`nuclei-sdk`,里面有一个脚本`setup.sh`.
 
 ```shell
 NUCLEI_TOOL_ROOT=~/Nuclei
-# Create your setup_config.sh
-# and define NUCLEI_TOOL_ROOT like below
-# NUCLEI_TOOL_ROOT=/home/develop/Software/Nuclei
+## Create your setup_config.sh
+## and define NUCLEI_TOOL_ROOT like below
+## NUCLEI_TOOL_ROOT=/home/develop/Software/Nuclei
 SETUP_CONFIG=setup_config.sh
 
 [ -f $SETUP_CONFIG ] && source $SETUP_CONFIG
@@ -128,7 +128,7 @@ export PATH=$NUCLEI_TOOL_ROOT/gcc/bin:$NUCLEI_TOOL_ROOT/openocd/bin:$NUCLEI_TOOL
 NUCLEI_TOOL_ROOT=<你的dir1的绝对路径>
 ```
 
-## 设置环境
+### 设置环境
 
 写好上面的脚本之后,每次进入`nuclei-sdk`目录编译之前都要运行`setup.sh`脚本.
 
@@ -138,7 +138,7 @@ source setup.sh
 
 运行之后,就可以直接使用`riscv-nuclei-elf-gcc`等工具.
 
-## 编译helloworld
+### 编译helloworld
 
 使用`make`,编译`application/baremetal/helloworld`目录下的程序.参数需要设置`SOC`类型和板类型.
 
@@ -156,9 +156,9 @@ make PROGRAM=application/baremetal/helloworld SOC=gd32vf103 BOARD=gd32vf103c_lon
 make PROGRAM=application/baremetal/helloworld SOC=gd32vf103 BOARD=gd32vf103c_longan_nano bin
 ```
 
-# 下载
+## 下载
 
-## 安装驱动
+### 安装驱动
 
 在下载和运行之前,为了使`USB`工作正常,我们也许需要安装以下软件.
 
@@ -168,7 +168,7 @@ make PROGRAM=application/baremetal/helloworld SOC=gd32vf103 BOARD=gd32vf103c_lon
 sudo apt install libusb-0.1-4 libftdi1 libhidapi-hidraw0
 ```
 
-## dfu查看设备列表
+### dfu查看设备列表
 
 通过`typec`口将电脑和`longan nano`连接.
 
@@ -186,7 +186,7 @@ sudo apt install libusb-0.1-4 libftdi1 libhidapi-hidraw0
 
 如果你的还是没有显示,那就不知道为什么了.
 
-## dfu下载程序
+### dfu下载程序
 
 惨案
 
@@ -198,13 +198,13 @@ sudo ./dfu-util -D <你的bin文件路径> -s 0x08000000
 
 一阵摇晃之后,程序就下载好了,这时候可以按`reset`启动.
 
-# 运行
+## 运行
 
 由于这个程序是通过串口打印一些信息,我们要用电脑连到串口,来得知他到底有没有正常打印.
 
 这时候就需要连接`jtag`.
 
-## jtag接线
+### jtag接线
 
 调试器和`longan nano`的连接方式如下:
 
@@ -246,7 +246,7 @@ sudo ./dfu-util -D <你的bin文件路径> -s 0x08000000
 
 ![](/images/20211225192004.png)
 
-## 连接电脑
+### 连接电脑
 
 安装`minicom`.
 
@@ -264,7 +264,7 @@ sudo apt install minicom
 sudo minicom -D /dev/ttyUSB1 -b 115200
 ```
 
-## 输出结果
+### 输出结果
 
 打开`minicom`之后,按`longan nano`的`reset`,会重新执行程序并且在终端打印一些信息.
 
