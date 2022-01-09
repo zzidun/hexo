@@ -105,6 +105,16 @@ sudo cp <xxx.desktop> /usr/share/application/
 sudo apt-get --fix-broken install -y
 ```
 
+# apt install XXX-
+
+千万谨慎,不要在安装命令后面多写一个横杆`-`,这代表卸载.
+
+某一次我想要看看软件源提供了哪些版本的`gcc`,于是输入了`sudo apt install gcc-`,然后按`tab`查看列出的软件包.
+
+这时候列出的软件包列表是用回车翻页的,我一直按回车,没想到多按了几个.
+
+然后就变成执行了`sudo apt install gcc-`,一堆软件被卸载了,我人也裂开了.
+
 # 常用软件安装
 
 ## git设置
