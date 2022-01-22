@@ -157,7 +157,7 @@ go version
 
 ### npm
 
-{% post_link deepin安装和配置mariaDB %}
+{% post_link 安装和配置mariaDB %}
 
 ### firefox
 
