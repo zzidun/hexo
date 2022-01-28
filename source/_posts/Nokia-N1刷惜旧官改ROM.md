@@ -90,6 +90,8 @@ sudo fastboot flash boot recovery <你存放的路径>/twrp2.8.7.1-nokia-n1-zh-c
 
 选`清楚->格式化data`,滑动确认清除.
 
+### 方法1 线刷
+
 选`高级->adb线刷`,确认开始.
 
 电脑输入命令
@@ -97,6 +99,12 @@ sudo fastboot flash boot recovery <你存放的路径>/twrp2.8.7.1-nokia-n1-zh-c
 ```shell
 adb sideload <你存放的路径>/Nokia_n1-B19(5.1)-惜旧新官改-MD5_c31812148c.zip
 ```
+
+### 方法2 卡刷
+
+有可能你用`adb sideload`传不进去.
+
+但是你的电脑可以把`ROM`包传到平板上,那么你可以直接在`twrp`内找到你传进去的包,然后直接安装,图形化得很.
 
 一阵摇晃之后,就会进入系统.
 
