@@ -219,3 +219,17 @@ export EGL_PLATFORM=x11
 ```
 
 重新打开终端,输入`anbox.appmgr`就可以打开了.
+
+### steam
+
+需要安装以下软件
+
+```shell
+sudo apt install libgl1-mesa-dri:i386 libgl1:i386
+```
+
+`~/.profile`末尾加上变量
+
+```shell
+PROTON_USE_WINED3D=1
+```

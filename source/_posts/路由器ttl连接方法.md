@@ -11,6 +11,10 @@ tags:
  - uboot
 ---
 
+* 安装软件;
+* 基本配置;
+* 排针焊接和连线;
+
 <!-- more -->
 
 ## 安装minicom和tftpd-hpa
