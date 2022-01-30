@@ -233,3 +233,38 @@ sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 ```shell
 PROTON_USE_WINED3D=1
 ```
+
+### kvm
+
+以下方法转载自[这个博客](https://linux.cn/article-11151-1.html)
+
+打开`/etc/libvirt/libvirtd.conf`进行编辑：
+
+```shell
+    sudo vi /etc/libvirt/libvirtd.conf
+```
+
+将`UNIX`域套接字组所有者设置为`libvirt`：
+
+```shell
+unix_sock_group = "libvirt"
+```
+
+调整`UNIX`域套接字的读写权限：
+
+```shell
+unix_sock_rw_perms = "0770"
+```
+
+步骤 3：启动并启用`libvirtd`服务
+
+```shell
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+```
+
+添加用户到`libvirt`组
+
+```shell
+sudo usermod -a -G libvirt $(whoami)
+```
