@@ -1,20 +1,22 @@
 ---
-title: C艹的源码阅读
+title: C++模板元编程初步(施工中)
 date: 2022-01-22 17:48:26
 categories:
  - 学习和理论
 tags:
  - C++
+ - 模板元编程
 ---
 
-* integral_constant;
-
+* integral_constant源码分析;
+* conditional源码分析;
+* \_\_or\_源码分析;
 
 <!-- more -->
 
 ## integral_constant
 
-```C++
+```cpp
 template<typename _Tp, _Tp __v>
 struct integral_constant
 {
@@ -37,7 +39,7 @@ struct integral_constant
 
 如果像是这样:
 
-```shell
+```cpp
 int get_five() {return 5;}
 
 int some_value[get_five() + 7];
@@ -71,8 +73,9 @@ int some_value[get_five() + 7];
 
 这些成员都是可以在编译期确定了,也就是可以写一个这样的代码:
 
-```C++
-std::integral_constant<bool, true>::value_type the_bool = std::integral_constant<bool, true>::value;
+```cpp
+std::integral_constant<bool, true>::value_type the_bool
+  = std::integral_constant<bool, true>::value;
 ```
 
 这个代码虽然没啥卵用,但是这个用法是很有用的.
@@ -83,7 +86,7 @@ std::integral_constant<bool, true>::value_type the_bool = std::integral_constant
 
 类似的用法如下:
 
-```C++
+```cpp
 struct sample{
     constexpr operator double() const noexcept { return 1.0；}
     constexpr operator float() const noexcept { return 2.0; }
@@ -107,7 +110,7 @@ int main()
 
 例如这样:
 
-```C++
+```cpp
 struct sample {
     constexpr int operator()() const noexcept { return 0; }
     constexpr int operator()(int a) const noexcept { return 1; }
@@ -128,7 +131,7 @@ int main()
 
 ### true_type和false_type
 
-```C++
+```cpp
 /// The type used as a compile-time boolean with true value.
 typedef integral_constant<bool, true>     true_type;
 
@@ -142,16 +145,17 @@ C++预先定义了这两个结构体,其他很多地方用到.
 
 | 用法 | 效果 |
 | --- | --- |
-| `value` | 值`true` |
-| `value_type` | 类型`bool` |
+| `true_type().value` | 值`true` |
+| `true_type::value_type` | 类型`bool` |
 | `type` | 类型`integral_constant<bool, true>` |
-| `bool(true_type)` | 值`true` |
-| `true_type()` | 值`true` |
+| `bool(true_type())` | 值`true` |
+| `true_type()()` | 值`true` |
 
+再次强调,这里几个成员,要不就是`constexpr`变量和函数,要不就是`typedef`定义的类型.他们都可以在编译期确定.
 
 ## conditional
 
-```C++
+```cpp
 template<bool _Cond, typename _Iftrue, typename _Iffalse>
     struct conditional
     { typedef _Iftrue type; };
@@ -176,9 +180,9 @@ template<typename _Iftrue, typename _Iffalse>
 
 因此,C++定义了`__or_`, `__and_`等等结构体,来实现复杂的判断.
 
-## __or_
+## \_\_or\_
 
-```C++
+```cpp
   template<typename...>
     struct __or_;
 
@@ -202,6 +206,45 @@ template<typename _Iftrue, typename _Iffalse>
     : public conditional<_B1::value, _B1, __or_<_B2, _B3, _Bn...>>::type
     { };
 ```
+这里细说`__or_`.
 
-这里细说`__or_`,当我们不给`__or_`传模板参数时,他就会直接继承一个`false_type`.
+### \_\_or\_<\>
 
+当我们不给`__or_`传模板参数时,他就会直接继承一个`false_type`.
+
+也就是说以下代码:
+
+```cpp
+    std::__or_<> empty_or;
+    std::cout << empty_or.value << std::endl;
+```
+
+会输出`0`.
+
+### \_\_or\_<\_B1\>
+
+当`__or_`接受一个模板参数的时候,他直接继承这个这个参数.
+
+也就是如果这个参数继承了`true_type`,也就是`_B1::value`为`true`,那么`__or_`就会继承`_B1`,从而表现出`true_type`的特点.
+
+同理,如果这个参数继承了`false_type`,那么`__or_`表现出`false_type`的特点.
+
+这非常符合`or`的特征,当只接收一个布尔值时,计算结果就是这个布尔值.
+
+### \_\_or\_<\_B1, \_B2\>
+
+如果`_B1::value`为`true`,那么`conditional<_B1::value, _B1, _B2>::type`将会返回`_B1`,`__or_`直接继承`_B1`,无视`_B2`.
+
+否则就继承`_B2`.
+
+继承`_B2`之后,`__or_`的`value`取决于`_B2::value`.
+
+这和`or`运算的表现一模一样.
+
+此外,`stl`的源码中还有`__and_`等等用于逻辑运算的模板类.实现方法也类似.
+
+到这里我们发现一个特点,模板元编程能够在编译期执行一些条件判断.
+
+他不能像指令式编程那样一条条语句往下写,反而很像函数式编程.
+
+可以通过上面的方法来组合各个类,编译器一顿推导之后,就会返回我们想要的值.
