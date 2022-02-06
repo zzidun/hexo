@@ -58,7 +58,9 @@ sudo apt install adb fastboot
 
 ## 进入twrp
 
-首先打开`开发者模式`,在`开发者模式`打开`USB调试`.
+首先打开`开发者模式`,在`开发者模式`打开`USB调试`和`oem解锁`.
+
+
 
 弹出`允许USB调试吗?`,选择`一律允许使用这台计算机进行调试`,然后`确认`.
 
@@ -79,7 +81,7 @@ sudo fastboot oem unlock
 输入以下命令刷入`twrp`
 
 ```shell
-sudo fastboot flash boot recovery <你存放的路径>/twrp2.8.7.1-nokia-n1-zh-cn.img
+sudo fastboot flash boot <你存放的路径>/twrp2.8.7.1-nokia-n1-zh-cn.img
 ```
 
 重启,就会进入`twrp`.
@@ -104,7 +106,9 @@ adb sideload <你存放的路径>/Nokia_n1-B19(5.1)-惜旧新官改-MD5_c3181214
 
 有可能你用`adb sideload`传不进去.
 
-但是你的电脑可以把`ROM`包传到平板上,那么你可以直接在`twrp`内找到你传进去的包,然后直接安装,图形化得很.
+但是你的电脑识别到平板了,可以把`ROM`包传到平板上.
+
+那么你可以直接在`twrp`内找到你传进去的包,然后直接安装,图形化得很.
 
 一阵摇晃之后,就会进入系统.
 

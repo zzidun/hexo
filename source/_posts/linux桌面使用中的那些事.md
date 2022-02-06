@@ -29,7 +29,7 @@ tags:
 | --- | --- | --- |
 | `/boot/efi` | `fat32` | `100M` |
 | `/` | `ext4` | `其余全部空间` |
-| `<无>` | `linux-swap` | `0.5G` |
+| `<无>` | `linux-swap` | `8G` |
 
 以前我把`/boot`独立分区弄得很小(`400M`),然后某次更新竟然满了,做什么都失败.
 
@@ -114,6 +114,13 @@ sudo apt-get --fix-broken install -y
 这时候列出的软件包列表是用回车翻页的,我一直按回车,没想到多按了几个.
 
 然后就变成执行了`sudo apt install gcc-`,一堆软件被卸载了,我人也裂开了.
+
+## 休眠设置
+
+看这个[文章](https://xie.infoq.cn/article/af26942709c82ab1c7cd47f87)
+
+和这个[文章](https://blog.csdn.net/defrag257/article/details/103997722)
+
 
 ## 常用软件安装
 
@@ -268,3 +275,21 @@ sudo systemctl enable libvirtd
 ```shell
 sudo usermod -a -G libvirt $(whoami)
 ```
+
+### qbittorent增强版
+
+可以防止迅雷吸血.
+
+迅雷得到网上其他bt软件的用户分享的资源,却不给别人分享.
+
+这样自私自利的软件需要我们一起抵制.
+
+下面命令安装的版本,可以禁止向迅雷,qq等吸血软件分享.
+
+```cpp
+sudo add-apt-repository ppa:poplite/qbittorrent-enhanced
+sudo apt-get update
+sudo apt install qbittorrent-enhanced
+```
+
+`工具->首选项->高级->上传连接策略->反吸血`
