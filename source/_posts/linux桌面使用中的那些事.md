@@ -63,6 +63,9 @@ tmpfs /var/tmp tmpfs defaults 0 0
 
 {% post_link deepin开启远程桌面服务-使用vnc和rdp连接deepin %}
 
+其他系统可以看这个[链接](https://www.hiroom2.com/ubuntu-2004-xrdp-kde-en)
+
+
 ## 快捷方式
 
 ### 制作快捷方式

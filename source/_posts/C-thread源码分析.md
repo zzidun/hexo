@@ -1,11 +1,12 @@
 ---
-title: C++thread类分析
+title: C++thread源码分析
 date: 2022-01-31 21:43:54
 categories:
  - 学习和理论
 tags:
  - C++
  - 线程
+ - stl基础设施源码分析
 ---
 
 * thread的内部类;
@@ -23,7 +24,7 @@ tags:
 #include <bits/stdc++.h>
 
 struct node {
-    
+
     node() { printf("%p, cons\n", this); }
     node(node &n) { printf("%p, copy from %p\n", this, &n); }
     node(node &&n) { printf("%p, move from %p\n", this, &n); }
@@ -670,7 +671,7 @@ __gthread_detach (__gthread_t __threadid)
 
 这个`_Impl_base`持有一个指向`_Impl_base`的智能指针.目前意义不明,后面将会提到.
 
-#### 
+####
 
 ```cpp
   private:

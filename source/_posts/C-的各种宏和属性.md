@@ -1,12 +1,14 @@
 ---
-title: C++的各种宏和属性(总结中)
+title: C++的各种宏和属性
 date: 2022-02-01 11:33:18
 categories:
  - 经验和总结
 tags:
  - C++
+ - stl基础设施源码分析
 ---
 
+* 总结中;
 * 宏;
 * progma;
 * \_\_cpluscplus;
@@ -20,7 +22,7 @@ tags:
 | --- | --- | --- |
 | `_GLIBCXX17_DEPRECATED` | | 这个东西即将被删除,不推荐使用 |
 | `_GLIBCXX_GTHREAD_USE_WEAK` | 对于`MINGW32`为`0`,否则为`1` | 不知道 |
-| `_GLIBCXX_HAS_GTHREADS` | 如果可用则为`1` | 表示当前`gthread`库是否可用 | 
+| `_GLIBCXX_HAS_GTHREADS` | 如果可用则为`1` | 表示当前`gthread`库是否可用 |
 | `_GLIBCXX_HIDE_EXPORTS` | | 在`gthr.h`中,如果没有定义这个宏,就会执行`#pragma GCC visibility pop` |
 | `_GLIBCXX_VISIBILITY` | `__attribute__ ((__visibility__ (#V)))` | 改变可见性 |
 | `_GLIBCXX_HAVE_ATTRIBUTE_VISIBILITY` | 如果可以设置可见性,就有定义 | 决定`_GLIBCXX_VISIBILITY`是否起作用 |
@@ -55,7 +57,7 @@ protected
 hidden
     Indicates that the affected external linkage entities have the hidden visibility attribute. These entities are not exported in shared libraries, but their addresses can be referenced indirectly through pointers.
 internal
-    Indicates that the affected external linkage entities have the internal visibility attribute. These entities are not exported in shared libraries, and their addresses are not available to other modules. 
+    Indicates that the affected external linkage entities have the internal visibility attribute. These entities are not exported in shared libraries, and their addresses are not available to other modules.
 
 可以通过以上指令来指定实体的可见性,如果在没有`push`的情况下使用`pop`,编译器将会警告.
 

@@ -2,10 +2,11 @@
 title: C++atomic源码分析
 date: 2022-02-06 13:12:33
 categories:
- - 学习与理论
+ - 学习和理论
 tags:
  - C++
  - atomic
+ - stl基础设施源码分析
 ---
 
 * 未写完;
@@ -657,5 +658,3 @@ bool __atomic_is_lock_free_c(size_t size, void *ptr) {
       { return __atomic_fetch_xor(&_M_i, __i, int(__m)); }
     };
 ```
-
-

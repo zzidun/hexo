@@ -2,13 +2,14 @@
 title: C++chrono源码分析
 date: 2022-02-05 19:58:13
 categories:
- - 学习与理论
+ - 学习和理论
 tags:
  - C++
  - chrono
  - duration
  - ratio
  - time_point
+ - stl基础设施源码分析
 ---
 
 * 未写完;
@@ -180,7 +181,7 @@ static constexpr intmax_t den = __static_abs<_Den>::value / __static_gcd<_Num, _
 内部定义了这几个类,后面会提到.
 
 | 类 | 描述 |
-| --- | --- | 
+| --- | --- |
 | `system_clock` | 从系统获取的时钟 |
 | `steady_clock` |不能被修改的时钟 |
 | `high_resolution_clock` | 高精度时钟,实际上是`system_clock`或者`steady_clock`的别名 |
@@ -188,4 +189,4 @@ static constexpr intmax_t den = __static_abs<_Den>::value / __static_gcd<_Num, _
 
 ## \_\_duration\_common\_type\_wrapper
 
-待续 
+待续
