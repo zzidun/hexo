@@ -401,7 +401,7 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
 
 这里是**第二次**移动,这里把可执行对象`_Invoker`移动到堆内存,并且用`_State_ptr`指向他.
 
-这个`_State_ptr`指向的内存将会在线程结束的时候释放.下面的函数中不会将它释放.
+这个`_State_ptr`指向的内存将会在线程结束的时候析构,析构时才会释放堆上的这块空间.
 
 #### \_M\_start\_thread
 

@@ -65,6 +65,15 @@ tmpfs /var/tmp tmpfs defaults 0 0
 
 其他系统可以看这个[链接](https://www.hiroom2.com/ubuntu-2004-xrdp-kde-en)
 
+## 指定软件版本
+
+有时候我们可以同时安装多个版本的`gcc`,这时候可以使用`update-alternatives`命令来修改默认使用的`gcc`.
+
+```shell
+sudo update-alternatives --install /usr/bin/gcc gcc <需要使用的gcc的路径> <足够大的数值>
+```
+
+这个足够大的数值只要确保比之前指定过的数值大就可以,从来没有指定过就设置为`1`也行.
 
 ## 快捷方式
 

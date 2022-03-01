@@ -1,5 +1,5 @@
 ---
-title: 麻雀d1s编译修复adb和phoenixsuit连接问题
+title: 麻雀d1s修复adb和phoenixsuit连接问题
 date: 2022-02-08 13:22:55
 categories:
  - 经验和总结
