@@ -170,11 +170,10 @@ source ~/.bashrc
 go version
 ```
 
-### mariaDB
-
+### npm
 {% post_link 自行安装nodejs和npm-解决apt源版本不兼容问题 %}
 
-### npm
+### mariaDB
 
 {% post_link 安装和配置mariaDB %}
 
