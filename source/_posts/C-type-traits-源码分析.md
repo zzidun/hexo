@@ -1,12 +1,13 @@
 ---
 title: C++ type traits 源码分析
-date: 2022-03-05 14:31:08
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - C++
- - 模板元编程
- - 细说std源码
+  - C++
+  - 模板元编程
+  - 细说std源码
+abbrlink: ae6bf35b
+date: 2022-03-05 14:31:08
 ---
 
 <!-- more -->

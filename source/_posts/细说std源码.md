@@ -1,11 +1,12 @@
 ---
 title: 细说std源码
-date: 2022-03-07 15:02:01
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - C++
- - 细说std源码
+  - C++
+  - 细说std源码
+abbrlink: ad8a0b77
+date: 2022-03-07 15:02:01
 ---
 
 * 《细说std源码》前言和目录;

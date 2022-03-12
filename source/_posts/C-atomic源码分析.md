@@ -1,12 +1,13 @@
 ---
 title: C++atomic源码分析
-date: 2022-02-06 13:12:33
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - C++
- - atomic
- - 细说std源码
+  - C++
+  - atomic
+  - 细说std源码
+abbrlink: 51d9423d
+date: 2022-02-06 13:12:33
 ---
 
 * 未写完;

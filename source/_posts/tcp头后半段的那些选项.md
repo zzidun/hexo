@@ -1,11 +1,12 @@
 ---
 title: tcp头后半段的那些选项
-date: 2022-01-04 16:27:02
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - tcp
- - 计算机网络
+  - tcp
+  - 计算机网络
+abbrlink: ad7e6196
+date: 2022-01-04 16:27:02
 ---
 
 * EOL & NOP;

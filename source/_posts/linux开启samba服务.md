@@ -1,11 +1,12 @@
 ---
 title: linux开启samba服务
-date: 2022-01-27 15:06:24
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - linux
- - samba
+  - linux
+  - samba
+abbrlink: db95d7df
+date: 2022-01-27 15:06:24
 ---
 
 * samba安装;

@@ -1,11 +1,12 @@
 ---
 title: ffmpeg命令行视频转音频 剪辑音频
-date: 2021-12-27 21:58:56
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - ffmpeg
- - bilibili
+  - ffmpeg
+  - bilibili
+abbrlink: ca9c0f8d
+date: 2021-12-27 21:58:56
 ---
 
 * ffmpeg命令行视频转音频

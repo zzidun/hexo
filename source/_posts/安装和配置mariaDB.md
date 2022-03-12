@@ -1,10 +1,11 @@
 ---
 title: 安装和配置mariaDB
-date: 2021-12-25 17:29:27
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - mariaDB
+  - mariaDB
+abbrlink: a738e98a
+date: 2021-12-25 17:29:27
 ---
 
 * 安装mariaDB;

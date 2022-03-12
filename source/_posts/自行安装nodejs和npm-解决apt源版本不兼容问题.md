@@ -1,14 +1,15 @@
 ---
 title: '自行安装nodejs和npm,解决apt源版本不兼容问题'
-date: 2021-12-25 17:40:39
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - vue
- - nodejs
- - npm
- - debian
- - deepin
+  - vue
+  - nodejs
+  - npm
+  - debian
+  - deepin
+abbrlink: 917b256a
+date: 2021-12-25 17:40:39
 ---
 
 * 安装nvm;

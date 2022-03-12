@@ -1,12 +1,13 @@
 ---
 title: C++模板元编程初步
-date: 2022-01-22 17:48:26
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - C++
- - 模板元编程
- - 细说std源码
+  - C++
+  - 模板元编程
+  - 细说std源码
+abbrlink: ef6ea057
+date: 2022-01-22 17:48:26
 ---
 
 * integral_constant源码分析;

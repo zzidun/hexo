@@ -1,12 +1,13 @@
 ---
 title: Nokia N1刷惜旧官改ROM
-date: 2022-01-28 16:48:29
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - nokia n1
- - 惜旧
- - android
+  - nokia n1
+  - 惜旧
+  - android
+abbrlink: 4f38d4d9
+date: 2022-01-28 16:48:29
 ---
 
 * 解锁bootloader;

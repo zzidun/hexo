@@ -1,13 +1,14 @@
 ---
 title: linux下使用nuclei-sdk编译longan-nano程序并获取串口打印信息
-date: 2021-12-25 19:05:04
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - riscv
- - longan
- - nuclei
- - gd32vf103
+  - riscv
+  - longan
+  - nuclei
+  - gd32vf103
+abbrlink: 213a381f
+date: 2021-12-25 19:05:04
 ---
 
 * 下载nuclei sdk及其他工具;

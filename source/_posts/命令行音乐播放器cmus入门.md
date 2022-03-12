@@ -1,10 +1,11 @@
 ---
 title: 命令行音乐播放器cmus入门
-date: 2022-01-22 15:36:20
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - cmus
+  - cmus
+abbrlink: 357c031
+date: 2022-01-22 15:36:20
 ---
 
 * 主要页面;

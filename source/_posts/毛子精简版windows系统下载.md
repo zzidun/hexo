@@ -1,12 +1,13 @@
 ---
 title: 毛子精简版windows系统下载
-date: 2022-02-14 15:51:47
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - windows
- - 精简系统
- - 磁力链接
+  - windows
+  - 精简系统
+  - 磁力链接
+abbrlink: 9827976a
+date: 2022-02-14 15:51:47
 ---
 
 * 磁力链接;

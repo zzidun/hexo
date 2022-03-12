@@ -1,11 +1,12 @@
 ---
 title: linux桌面使用中的那些事
-date: 2021-12-28 20:42:48
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - linux
- - anbox
+  - linux
+  - anbox
+abbrlink: 17eed1d
+date: 2021-12-28 20:42:48
 ---
 
 * 安装时分区注意;

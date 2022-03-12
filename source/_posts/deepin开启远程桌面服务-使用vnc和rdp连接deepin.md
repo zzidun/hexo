@@ -1,13 +1,14 @@
 ---
 title: 'deepin开启远程桌面服务,使用vnc和rdp连接deepin'
-date: 2021-12-25 17:42:56
 categories:
- - 安装和配置
+  - 安装和配置
 tags:
- - deepin
- - vnc
- - rdp
- - xrdp
+  - deepin
+  - vnc
+  - rdp
+  - xrdp
+abbrlink: '70069604'
+date: 2021-12-25 17:42:56
 ---
 
 * 安装openssh;

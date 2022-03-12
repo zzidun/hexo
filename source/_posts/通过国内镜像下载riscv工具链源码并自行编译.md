@@ -1,10 +1,11 @@
 ---
 title: 通过国内镜像下载riscv工具链源码并自行编译
-date: 2021-12-25 16:58:12
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - riscv
+  - riscv
+abbrlink: 4b33f3aa
+date: 2021-12-25 16:58:12
 ---
 
 * 设置git选项避免失败;

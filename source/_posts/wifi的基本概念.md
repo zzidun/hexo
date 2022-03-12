@@ -1,13 +1,14 @@
 ---
 title: wifi的基本概念
-date: 2022-01-04 15:25:43
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - wlan
- - 802.11
- - wifi
+  - wlan
+  - 802.11
+  - wifi
 mathjax: true
+abbrlink: ba162d5f
+date: 2022-01-04 15:25:43
 ---
 
 <!-- more -->

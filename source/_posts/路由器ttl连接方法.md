@@ -1,14 +1,15 @@
 ---
 title: 路由器ttl连接方法
-date: 2022-01-06 13:47:35
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - ttl
- - minicom
- - tftp
- - openwrt
- - uboot
+  - ttl
+  - minicom
+  - tftp
+  - openwrt
+  - uboot
+abbrlink: edb033a1
+date: 2022-01-06 13:47:35
 ---
 
 * 安装软件;

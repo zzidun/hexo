@@ -1,13 +1,14 @@
 ---
 title: 麻雀d1s修复adb和phoenixsuit连接问题
-date: 2022-02-08 13:22:55
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - 全志d1s
- - tina
- - 麻雀开发板
- - riscv
+  - 全志d1s
+  - tina
+  - 麻雀开发板
+  - riscv
+abbrlink: a30c2c5a
+date: 2022-02-08 13:22:55
 ---
 
 * 修复pc连接电脑掉电问题;

@@ -1,12 +1,13 @@
 ---
 title: stack_chk_offset避免栈溢出攻击
-date: 2022-03-07 16:19:20
 categories:
- - 经验和总结
+  - 经验和总结
 tags:
- - 栈溢出
- - 汇编
- - riscv
+  - 栈溢出
+  - 汇编
+  - riscv
+abbrlink: 97bef05c
+date: 2022-03-07 16:19:20
 ---
 
 * \_\_stack\_chk\_guard的作用;

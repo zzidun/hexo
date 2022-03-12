@@ -1,12 +1,13 @@
 ---
 title: C++thread源码分析
-date: 2022-01-31 21:43:54
 categories:
- - 学习和理论
+  - 学习和理论
 tags:
- - C++
- - 线程
- - 细说std源码
+  - C++
+  - 线程
+  - 细说std源码
+abbrlink: 770726c0
+date: 2022-01-31 21:43:54
 ---
 
 * thread的内部类;
