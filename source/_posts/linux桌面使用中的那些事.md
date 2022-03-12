@@ -17,6 +17,15 @@ tags:
 
 <!-- more -->
 
+## 制作启动光盘
+
+```
+wodim -sao -v -speed=1 dev=/dev/<光盘设备> <iso文件>
+```
+
+我留意到直接挂载是不能写入的,需要用wodim工具.
+
+
 ## 安装时分区注意
 
 不要用默认分区,不要用默认分区,不要用默认分区.
@@ -196,6 +205,11 @@ go version
 
 
 搜索栏输入`browser.cache.memory.capacity`设置为`-1`.
+
+触屏
+
+修改`/etc/security/pam_env.conf`,在最后增加一行`MOZ_USE_XINPUT2 DEFAULT=1`
+在Firefox中，地址栏输入`about:config`，修改`dom.w3c_touch_events.enabled`为`1`。最后重启电脑。
 
 ### platformIO
 

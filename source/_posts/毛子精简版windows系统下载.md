@@ -29,3 +29,9 @@ tags:
 | `magnet:?xt=urn:btih:31aaa22e5e00c2bdbb4bc742f6df3df322763bee` | 满速下载 | 虽然安装页面是win8,但是装好之后是win7 |
 
 win7使用kms会报错,可以使用密钥`FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4`.
+
+另外记录一些磁力链接
+
+| 链接 | 说明 |
+| --- | --- |
+| `magnet:?xt=urn:btih:c6df2f47d033d54b054cafe7ef683ba167222d92` | windows XP SP3 |

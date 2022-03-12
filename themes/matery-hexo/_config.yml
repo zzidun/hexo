@@ -65,10 +65,10 @@ cover:
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
-  enable: false
+  enable: true
   showTitle: true
-  title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  title: 《细说std源码》
+  text: 迟早要写完的,目录链接(zzidun.tech/2022/03/07/xi-shuo-std-yuan-ma/)
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -224,7 +224,7 @@ snowdown:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.jpg
-  career: 将来的版本答案
+  career: 三十年河东,三十年河西,莫欺新手菜.
   introduction:
 
 # config my projects informations in about page.
@@ -604,7 +604,7 @@ instantpage:
 # banner 是否每日切换.
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner:
-  enable: true
+  enable: false
 
 #ICP备案信息尾部显示
 icp:
