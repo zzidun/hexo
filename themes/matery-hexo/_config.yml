@@ -19,6 +19,9 @@ menu:
   Friends:
     url: /friends
     icon: fas fa-address-book
+  recommendedPosts:
+    url: /recommends
+    icon: fas fa-archive
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list

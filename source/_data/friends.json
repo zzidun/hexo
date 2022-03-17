@@ -22,4 +22,16 @@
 	"introduction": "他是Tee，音乐与Linux爱好者。",
 	"url": "https://lado.me/",
 	"title": "用linux做音乐"
+},{
+	"avatar": "https://oeis.org/favicon.ico",
+	"name": "OEIS",
+	"introduction": "在线整数数列数据库",
+	"url": "https://oeis.org/",
+	"title": "在线查询整数数列"
+},{
+	"avatar": "http://eel.is/c++draft/icon.png",
+	"name": "c++ draft",
+	"introduction": "C++标准草案",
+	"url": "http://eel.is/c++draft/",
+	"title": "查看c++draft目录"
 }]
