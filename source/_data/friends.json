@@ -1,0 +1,25 @@
+[{
+	"avatar": "https://image.winudf.com/v2/image1/b3JnLnJlYWRlcmFfaWNvbl8xNTUwOTAwMjY4XzA3OQ/icon.png?w=170&fakeurl=1",
+	"name": "ReadEra",
+	"introduction": "无广告,无骚扰的安卓pdf阅读软件",
+	"url": "https://play.google.com/store/apps/details?id=org.readera&hl=zh",
+	"title": "用 ReadEra 阅读书籍"
+},{
+	"avatar": "https://zzidun.tech/medias/logo.png",
+	"name": "Matery博客主题",
+	"introduction": "功能齐全,配置简单",
+	"url": "https://github.com/blinkfox/hexo-theme-matery",
+	"title": "使用 Matery 博客主题"
+},{
+	"avatar": "",
+	"name": "佐须之男的博客",
+	"introduction": "众多openwrt新手的引路人",
+	"url": "https://forgotfun.org/",
+	"title": "前往佐须之男的博客"
+},{
+	"avatar": "https://lado.me/static/img/gravatar-black.png",
+	"name": "啦哆咪",
+	"introduction": "他是Tee，音乐与Linux爱好者。",
+	"url": "https://lado.me/",
+	"title": "用linux做音乐"
+}]
