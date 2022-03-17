@@ -13,17 +13,38 @@ menu:
   Archives:
     url: /archives
     icon: fas fa-archive
+  # About:
+  #   url: /about
+  #   icon: fas fa-user-circle
   About:
-    url: /about
-    icon: fas fa-user-circle
-  Friends:
-    url: /friends
-    icon: fas fa-address-book
-  recommendedPosts:
-    url: /recommends
-    icon: fas fa-archive
+   icon: fas fa-user-circle
+   children:
+     - name: 详情
+       url: /about
+       icon: fas fa-user-circle
+     - name: 记录
+       url: /record
+       icon: fas fa-user-circle
+  # Friends:
+  #  icon: fas fa-address-book
+  #  clildren:
+  #    - name: Friends
+  #      url: /friends
+  #      icon: fas fa-address-book
+  #    - name : recommendedPosts
+  #      url: /recommends
+  #      icon: fas fa-archive
+  外部链接:
+   icon: fas fa-address-book
+   children:
+     - name: 友情链接
+       url: /friends
+       icon: fas fa-address-book
+     - name: 推荐文章
+       url: /recommends
+       icon: fas fa-archive
   # 二级菜单写法如下
-  #Medias:
+  # Medias:
   #  icon: fas fa-list
   #  children:
   #    - name: Musics
