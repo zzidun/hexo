@@ -71,6 +71,31 @@ date: 2022-03-05 15:37:28
 
 #### 7.6.1.5 类成员访问[expr.ref]
 
+## 9 声明[dcl]
+
+### 9.2 标识符[dcl.spec]
+
+#### 9.2.9 类型标识符[dcl.type]
+
+##### 9.2.9.6 占位类型标识符[dcl.spec.auto]
+
+###### 9.2.9.6.1 通常[dcl.spec.auto.general]
+
+```
+placeholder-type-specifier:
+  type-constraint auto
+  type-constraint decltype ( auto )
+```
+
+1. 占位类型标识符表示一个占位类型,这个占位类型在类型推导之后将会被替换成真正的类型.
+
+### 9.3 声明符[dcl.dcl]
+
+#### 9.3.4 声明符的含义[dcl.meaning]
+
+##### 9.3.4.1 通常[dcl.meaning.general]
+
+##### 9.3.4.6 函数[dcl.fct]
 
 
 ## 11 类[class]
