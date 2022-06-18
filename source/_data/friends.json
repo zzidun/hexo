@@ -2,8 +2,14 @@
 	"avatar": "https://image.winudf.com/v2/image1/b3JnLnJlYWRlcmFfaWNvbl8xNTUwOTAwMjY4XzA3OQ/icon.png?w=170&fakeurl=1",
 	"name": "ReadEra",
 	"introduction": "无广告,无骚扰的安卓pdf阅读软件",
-	"url": "https://play.google.com/store/apps/details?id=org.readera&hl=zh",
+	"url": "https://play.google.com/store/apps/details?id=org.readera",
 	"title": "用 ReadEra 阅读书籍"
+},{
+	"avatar": "https://image.winudf.com/v2/image1/Y29tLmN4aW52ZW50b3IuZmlsZS5leHBsb3Jlcl9pY29uXzE1NTE5OTg4MDhfMDUz/icon.png?w=170&fakeurl=1",
+	"name": "CX文件管理器",
+	"introduction": "无广告,无骚扰的安卓文件管理器,支持samba等多种文件共享协议和各类网盘",
+	"url": "https://play.google.com/store/search?q=cx+file+explorer&c=apps",
+	"title": "去下载 CX文件管理器"
 },{
 	"avatar": "https://zzidun.tech/medias/logo.png",
 	"name": "Matery博客主题",

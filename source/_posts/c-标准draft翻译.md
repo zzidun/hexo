@@ -7,6 +7,7 @@ tags:
   - C++语言律师
   - 工地英语
   - 有生之年
+mathjax: true
 abbrlink: 87a42267
 date: 2022-03-05 15:37:28
 ---
@@ -162,3 +163,17 @@ process* process::run_chain = running;
 5. 在一个合法的程序中一个静态数据成员只能被定义一次.[basic.def.odr]
 
 6. 命名空间访问中的类的静态数据成员具有类名称的链接.[basic.link]
+
+## 12 重载[over]
+
+### 12.2 重载分析[over.match]
+
+#### 12.2.4 最可行的函数[over.match.best]
+
+##### 12.2.4.1 通常[over.match.best.general]
+
+##### 12.2.4.2 隐式转换序列[over.best.ics]
+
+###### 12.2.4.2.1 通常[over.best.ics.general]
+
+1. 隐式转换序列,是一用于将函数调用时传入的参数类型转换为被调用的函数所需要的参数类型的.
